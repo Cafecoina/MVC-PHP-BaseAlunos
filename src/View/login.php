@@ -1,3 +1,37 @@
+<?php
+session_start();
+
+require_once '../Model/data/acessos.php';
+
+
+// Verifica se o formulário foi enviado
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Obtém as credenciais do formulário
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Verifica se as credenciais são válidas
+    if (isset($logins[$username]) && $logins[$username] === $password) {
+        // Define a variável de sessão para indicar que o usuário está autenticado
+        $_SESSION['logged_in'] = true;
+        $_SESSION['username'] = $username;
+
+        // Redireciona para a página de upload de imagens
+        header('Location: upload-form.php');
+        exit();
+    } else {
+        // Credenciais inválidas, exibe uma mensagem de erro
+        $error_message = 'Nome de usuário ou senha inválidos.';
+    }
+}
+?>
+
+
+<!-- ********************************************************************************************************* -->
+<!-- ********************************************************************************************************* -->
+<!-- ********************************************************************************************************* -->
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,7 +39,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NM Base de Aprovados</title>
-    <link rel="stylesheet" href="/assets/css/style-login.css">
+    <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
@@ -13,7 +47,7 @@
     <div id="pg-login" class="container">
         <!-- ******************** LOGO TOP PADRÃO ************************** -->
         <div class="logo">
-            <img src="/assets/IMG/logo-login.png" alt="Logo da Empresa">
+            <img src="/public/imgs/logo-login.png" alt="Logo da Empresa">
         </div>
         <!-- *************************************************************** -->
 
@@ -33,11 +67,11 @@
                     <button type="submit" class="btn btn-primary">Entrar</button>
                 </div>
                 <?php if (isset($error_message)) : ?>
-                    <div class="mt-3 text-center">
-                        <span class="text-danger">
-                            <?php echo $error_message; ?>
-                        </span>
-                    </div>
+                <div class="mt-3 text-center">
+                    <span class="text-danger">
+                        <?php echo $error_message; ?>
+                    </span>
+                </div>
                 <?php endif; ?>
             </form>
         </div>
@@ -54,7 +88,15 @@
 
 
     <!-- ******************** SCRIPTS ESPECIFICOS ************************** -->
-    <script src="/assets/js/unsplash-body-api.js"></script>
+    <script src="/public/js/unsplash-body-api.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+

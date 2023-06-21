@@ -4,6 +4,98 @@
   --cor-clara1: white;
 }
 
+.bg-padrao {
+  /* background-color: var(--cor-padrao1); */
+  background-size: cover;
+  font-family: tahoma;
+}
+
+.card input, .card select, .card textarea {
+  border: 2px solid var(--cor-padrao1);
+  border-radius: 15px;
+}
+
+.card input::placeholder {
+  color: var(--cor-padrao1);
+}
+
+.card h1 {
+  font-weight: bold;
+  color: var(--cor-padrao1);
+  padding-bottom: 15px;
+}
+
+.card button {
+  background-color: var(--cor-padrao1);
+  padding: 5px 15px;
+  font-weight: bold;
+  font-family: tahoma;
+}
+
+.card {
+  border-radius: 25px !important;
+}
+
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo img {
+  padding-top: 15px;
+  width: 10%;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--cor-clara1);
+  padding: 10px;
+}
+
+
+
+
+
+#ui-id-1, #ui-id-2 {
+  width: 350px !important;
+}
+
+.ui-autocomplete {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  list-style-type: none;
+  max-height: 200px; /* Defina a altura máxima da lista de sugestões */
+  overflow-y: auto; /* Adicione uma barra de rolagem vertical se necessário */
+}
+
+.ui-menu-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.ui-menu-item:hover {
+  background-color: #eaeaea;
+}
+
+:root {
+  --cor-padrao1: #008438;
+  --cor-padrao2: #80b928;
+  --cor-clara1: white;
+}
+
 body {
   /* background-color: var(--cor-padrao2) !important; */
   background-size: cover;
@@ -104,3 +196,4 @@ body {
   height: 50px;
   background-size: cover;
 }
+
