@@ -1,0 +1,21 @@
+{
+    "name": "coc-bc/basealunos",
+    "autoload": {
+        "psr-4": {
+            "CocBc\\Basealunos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lucas Malucelli",
+            "email": "115021259+Cafecoina@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    
+    "scripts": {
+        "start": "php -S 127.0.0.1:8000"
+    }
+
+    
+}

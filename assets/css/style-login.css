@@ -1,0 +1,106 @@
+:root {
+  --cor-padrao1: #008438;
+  --cor-padrao2: #80b928;
+  --cor-clara1: white;
+}
+
+body {
+  /* background-color: var(--cor-padrao2) !important; */
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-form {
+  margin: auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo img {
+  padding-top: 15px;
+  width: 10%;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--cor-clara1);
+  padding: 10px;
+}
+
+
+#pg-login button {
+  font-size: 1.2rem;
+  padding: 8px 50px;
+  background-color: var(--cor-padrao2);
+  border: 1px solid var(--cor-padrao2);
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+#pg-login button:hover {
+  background-color: var(--cor-padrao1);
+  background-position: bottom;
+}
+
+#pg-login input {
+  border: 2px solid var(--cor-padrao2);
+}
+
+#pg-login input::placeholder {
+  color: var(--cor-padrao1);
+}
+
+#pg-login h2 {
+  font-family: tahoma;
+  color: var(--cor-padrao1);
+}
+
+#pg-login h2 span {
+  font-weight: bold;
+}
+
+
+
+#pg-menu button {
+  font-size: 1.2rem;
+  padding: 8px 50px;
+  background-color: var(--cor-clara1);
+  border: 1px solid var(--cor-clara1);
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+#pg-menu button:hover {
+  background-color: var(--cor-padrao1);
+  background-position: bottom;
+}
+
+.icon-menu {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+}
